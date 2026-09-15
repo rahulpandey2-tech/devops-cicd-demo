@@ -21,7 +21,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::YOUR-AWS-ACCOUNT-ID:role/GitHubActionsS3DeployRole
+          role-to-assume: arn:aws:iam::849996547660:role/GitHubActionsS3DeployRole
           aws-region: eu-north-1
 
       - name: Test website files
@@ -33,7 +33,7 @@ jobs:
 
       - name: Deploy website to S3
         run: |
-          aws s3 sync . s3://YOUR-BUCKET-NAME \
+          aws s3 sync . s3://devops-cicd-demo-2026-rahul \
             --exclude ".git/*" \
             --exclude ".github/*" \
             --delete
