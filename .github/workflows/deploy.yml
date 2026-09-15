@@ -39,4 +39,4 @@ jobs:
             --delete
 
       - name: Deployment completed
-        run: echo "Website deployed successfully to S3."
+        run: echo "Website deployed successfully to S3." 
